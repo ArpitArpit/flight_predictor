@@ -1,0 +1,33 @@
+### Register a new user
+POST http://127.0.0.1:8000/api/users/register/
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "somepassword123"
+}
+
+###
+### Login with that user
+POST http://127.0.0.1:8000/api/users/login/
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "somepassword123"
+}
+
+### Test Live Prediction (Module 3 & 4)
+POST http://127.0.0.1:8000/api/predict/
+Content-Type: application/json
+Authorization: Token 0cd93700ad2879c3a4e1df0fa8747a83ce48bd02
+
+{
+    "flight_number": "UA 137", 
+    "Airline": "UA",
+    "AirportFrom": "JFK",
+    "AirportTo": "LAX",
+    "DayOfWeek": 5,
+    "Time": 700,
+    "Length": 300
+}
